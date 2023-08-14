@@ -1,0 +1,6 @@
+<div class="alert alert-success me-0 mb-0 py-1 px-2"
+     hx-trigger="todo-updated from:body"
+     hx-get="/completed"
+     hx-swap="outerHTML">
+    {{ done_count }}/{{ todos|length }} Completed
+</div>

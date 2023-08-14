@@ -1,0 +1,19 @@
+<li class="todo {% if todo.done %}done{% endif %}">
+    <input type="checkbox"
+           class="form-check-input"
+           name="done"
+           hx-post="/todos/{{ todo.id }}"
+           hx-swap="outerHTML"
+           hx-target="closest .todo"
+           {% if todo.done %}checked{% endif %}>
+    <span class="todo-text">{{ todo.text }}</span>
+    <button class="btn btn-sm btn-outline-danger delete-btn"
+            hx-delete="/todos/{{ todo.id }}"
+            hx-target="closest .todo"
+            hx-swap="outerHTML"
+            hx-confirm="Are you sure you want to delete this todo?"
+            title="Delete todo"
+    >
+        &cross;
+    </button>
+</li>

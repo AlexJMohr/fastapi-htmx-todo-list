@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding-block: 0.25em;
+    gap: 0.5rem;
+}
+
+.todo.done .todo-text {
+    text-decoration: line-through;
+}
+
+.todo .form-check-input {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.delete-btn {
+    margin-left: auto;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+}
